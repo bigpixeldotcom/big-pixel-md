@@ -34,7 +34,7 @@ export default function NavBar() {
       <div className="w-full max-w-7xl px-6 lg:mx-auto">
         <nav
           aria-label="Global"
-          className="w-full p-4 bg-white/60 dark:bg-black/60 rounded-full outline-1 outline-white dark:outline-metal-950 backdrop-blur-sm inline-flex justify-between items-center overflow-hidden shadow-lg shadow-metal-300/30 dark:shadow-black/60"
+          className="w-full p-4 bg-white/60 dark:bg-black/60 rounded-full outline-1 outline-metal-100 dark:outline-metal-950 backdrop-blur-sm inline-flex justify-between items-center overflow-hidden shadow-lg shadow-metal-300/30 dark:shadow-black/60"
         >
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5">
@@ -59,7 +59,7 @@ export default function NavBar() {
               <Link
                 key={nav.label}
                 href={nav.slug || '#'}
-                className="font-semibold tracking-tight px-6 py-3 rounded-full bg-transparent hover:bg-white dark:hover:bg-black transition-colors ease-in-out duration-300"
+                className="font-semibold tracking-tight px-6 py-3 rounded-full bg-transparent hover:bg-metal-50/50 dark:hover:bg-black transition-colors ease-in-out duration-300"
               >
                 {nav.label}
               </Link>
@@ -68,7 +68,7 @@ export default function NavBar() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
               href="/contact"
-              className="font-semibold text-purple-800 dark:text-purple-400 tracking-tight px-6 py-3 rounded-full bg-transparent hover:bg-white dark:hover:bg-black transition-colors ease-in-out duration-300"
+              className="font-semibold text-purple-800 dark:text-purple-400 tracking-tight px-6 py-3 rounded-full bg-transparent hover:bg-purple-50/25 dark:hover:bg-black transition-colors ease-in-out duration-300"
             >
               Contact me
             </Link>

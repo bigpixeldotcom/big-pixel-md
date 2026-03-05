@@ -1,5 +1,3 @@
-'use client';
-
 import Calibre, { frontmatter as calibreFM } from '@/app/markdown/testimonials/calibre.mdx';
 import Mcnag, { frontmatter as mcnagFM } from '@/app/markdown/testimonials/mcnag.mdx';
 import Carousel from '@/app/components/global/carousel';

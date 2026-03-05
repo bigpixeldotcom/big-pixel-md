@@ -1,5 +1,3 @@
-'use client';
-
 import ServiceCards from '@/app/markdown/pages/service-cards.mdx';
 
 export default function Services() {

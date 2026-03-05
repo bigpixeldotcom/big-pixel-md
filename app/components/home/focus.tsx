@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import FocusText, { frontmatter } from '@/app/markdown/pages/focus-text.mdx';
 
