@@ -16,16 +16,16 @@ export default function NavBar() {
       slug: '/about',
     },
     {
-      label: 'Work',
-      slug: '/work',
+      label: 'Projects',
+      slug: '/projects',
     },
     {
       label: 'Services',
       slug: '/services',
     },
     {
-      label: 'Blog',
-      slug: '/blog',
+      label: 'News',
+      slug: '/news',
     },
   ];
 
