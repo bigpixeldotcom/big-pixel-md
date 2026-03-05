@@ -45,7 +45,7 @@ export default function ProcessPrices() {
             <h2 className="font-headline font-black text-4xl md:text-5xl lg:text-6xl">
               A simple, supportive process
             </h2>
-            <div className="mt-8 prose prose-metal prose-headings:font-headline prose-headings:font-black max-w-none text-base sm:text-lg md:text-xl">
+            <div className="mt-8 prose prose-metal dark:prose-invert prose-headings:font-headline prose-headings:font-black max-w-none text-base sm:text-lg md:text-xl">
               <Process />
             </div>
           </div>

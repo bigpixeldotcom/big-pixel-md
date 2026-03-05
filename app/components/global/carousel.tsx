@@ -43,7 +43,7 @@ export default function Carousel({
         <PrevIcon />
       </button>
       <div className="embla__viewport flex-1" ref={emblaRef}>
-        <div className="embla__container items-center">{children}</div>
+        <div className="embla__container items-center mx-auto">{children}</div>
       </div>
       <button
         onClick={scrollNext}

@@ -1,6 +1,8 @@
+import Image from 'next/image';
 import { getProjectSlugs } from '@/app/lib/mdx';
 import GraphCard from '@/app/components/projects/graph-card';
 import ProjectDetails from '@/app/components/projects/details';
+import Carousel from '@/app/components/global/carousel';
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -26,6 +28,36 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           tech={frontmatter.tech}
         />
       </div>
+      <Carousel>
+        {frontmatter.images?.map((image: { src: string; alt: string }, index: number) => (
+          <Image
+            key={index}
+            src={`/images/projects/${image.src}`}
+            alt={image.alt}
+            width={1600}
+            height={1138}
+            className="rounded-lg w-full h-auto embla__slide"
+          />
+        ))}
+      </Carousel>
+      {frontmatter.scrollableImage && (
+        <div className="w-full h-full relative rounded-lg overflow-clip">
+          <div className="h-8 w-full bg-metal-50 border-b border-metal-400 rounded-t-lg py-1 px-4 flex items-center gap-2">
+            <div className="size-3 bg-red-600 rounded-full" />
+            <div className="size-3 bg-yellow-300 rounded-full" />
+            <div className="size-3 bg-green-300 rounded-full" />
+          </div>
+          <div className="overflow-y-scroll aspect-video">
+            <Image
+              src={`/images/projects/${frontmatter.scrollableImage}`}
+              alt={`${frontmatter.title} scrollable image`}
+              width={1600}
+              height={1138}
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
+      )}
     </main>
   );
 }

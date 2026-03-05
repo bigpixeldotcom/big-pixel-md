@@ -15,7 +15,7 @@ export default function AboutPage() {
         className="rounded-lg object-cover"
       />
       <p className="text-sm text-metal-500">{frontmatter.caption}</p>
-      <div className="prose prose-metal max-w-none text-base lg:text-lg xl:text-xl prose-headings:font-headline prose-headings:font-black">
+      <div className="prose prose-metal dark:prose-invert max-w-none text-base lg:text-lg xl:text-xl prose-headings:font-headline prose-headings:font-black">
         <AboutCopy />
       </div>
     </main>
