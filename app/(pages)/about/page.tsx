@@ -8,8 +8,8 @@ export default function AboutPage() {
         {frontmatter.title}
       </h1>
       <Image
-        src={frontmatter.heroImage}
-        alt={frontmatter.altText}
+        src={frontmatter.heroImage || '/images/about-2752x1536.jpg'}
+        alt={frontmatter.altText || ''}
         width={1200}
         height={800}
         className="rounded-lg object-cover"

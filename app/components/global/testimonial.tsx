@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 type TestimonialItem = {
   children: React.ReactNode;
-  organisation: string;
-  logo: string;
+  organisation?: string;
+  logo?: string;
 };
 
 export default function Testimonial(testimonial: TestimonialItem) {
@@ -14,13 +14,13 @@ export default function Testimonial(testimonial: TestimonialItem) {
         <div className="flex flex-col md:flex-row justify-center items-center gap-4">
           <Image
             src={testimonial.logo ? testimonial.logo : '/images/testimonial-icon.png'}
-            alt={`${testimonial.organisation} logo`}
+            alt={`${testimonial.organisation ?? 'Organisation'} logo`}
             width={96}
             height={96}
             className="size-8 md:size-12 object-contain"
           />
           <p className="font-bold text-base md:text-xl text-metal-700 tracking-tight">
-            {testimonial.organisation}
+            {testimonial.organisation ?? 'Organisation'}
           </p>
         </div>
       </div>
