@@ -9,7 +9,7 @@ type TestimonialItem = {
 export default function Testimonial(testimonial: TestimonialItem) {
   return (
     <div className="embla__slide w-full max-w-6xl">
-      <div className="flex flex-col items-center justify-center min-h-96 md:min-h-72 p-6 md:p-12 bg-metal-100 rounded-3xl prose prose-metal max-w-none text-base md:text-lg lg:text-xl text-center">
+      <div className="flex flex-col items-center justify-center p-6 md:p-12 bg-metal-100 rounded-3xl prose prose-metal max-w-none text-base md:text-lg lg:text-xl text-center">
         {testimonial.children}
         <div className="flex flex-col md:flex-row justify-center items-center gap-4">
           <Image

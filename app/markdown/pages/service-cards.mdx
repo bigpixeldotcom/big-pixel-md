@@ -1,35 +1,33 @@
 import { ServiceGrid, ServiceCard } from '@/app/components/home/service-grid';
 import { faBrowser, faGearComplexCode, faWreathLaurel } from '@awesome.me/kit-85090e0c99/icons/duotone/regular';
 
+{/*
+  When you add in the CTA, use the following code:
+
+    cta={{
+      label: 'More on Web Design',
+      linkType: 'internal',
+      url: '/services/web-design',
+    }}
+*/}
+
 <ServiceGrid>
   <ServiceCard
     icon={faBrowser}
     title="Web Design & UX"
-    subtitle="Websites that do the work, not just look the part."
-    cta={{
-      label: 'View Web Design Work',
-      linkType: 'internal',
-      url: '/services/web-design',
-    }}
+    subtitle="Is your website costing you supporters without you realising?"
     colour="green"
   >
-    I design charity websites that are **accessible, clear, intuitive**, and built
-    around what your visitors actually need to do – whether that's donating, signing
-    up to volunteer, finding information, or getting in touch.
+    If visitors can't find what they're looking for quickly, they leave. If your donation page is confusing, they don't donate.
 
-    I work with you to understand your supporters, your goals, and the user journeys
-    that matter most. I then design something that communicates your mission clearly
-    and compels people to act.
+    I design websites that are **clear**, **intuitive**, and built around what your visitors actually need to do: **donate**, **sign up**, find information, get in touch, or simply understand why your work matters.
+
+    I work with you to understand your supporters, your goals, and the user journeys that matter most. I then design something that communicates your mission clearly, and compels people to act.
   </ServiceCard>
   <ServiceCard
     icon={faGearComplexCode}
     title="Web Development"
-    subtitle="Built to work as hard as you do."
-    cta={{
-      label: 'Learn More',
-      linkType: 'internal',
-      url: '/services/web-development',
-    }}
+    subtitle="A web app that breaks when you need it most isn't a website — it's a liability."
     colour="purple"
   >
     Whether you need **online donation forms**, **event registration**, **member
@@ -44,16 +42,11 @@ import { faBrowser, faGearComplexCode, faWreathLaurel } from '@awesome.me/kit-85
   <ServiceCard
     icon={faWreathLaurel}
     title="Branding & Graphic Design"
-    subtitle="Visual identity that helps build trust."
-    cta={{
-      label: 'See Branding Examples',
-      linkType: 'internal',
-      url: '/services/branding',
-    }}
+    subtitle="People decide whether to trust you before they read a single word."
     colour="indigo"
   >
-    I create brand identities including **logos**, **colour systems**, **typography**, **campaign materials**, and **annual reports** that communicate who you are with clarity and consistency.
+    Your brand is doing work before anyone opens your website, reads your leaflet, or hears your name spoken aloud. If it looks inconsistent, or generic, it undermines confidence in everything you do — even when the work itself is life-changing.
 
-    Whether you're a new organisation needing your first visual identity or an established charity refreshing your look, I'll make sure your brand works just as hard as you do, across your website, your print materials, and your social media.
+     I create logos, colour systems, typography, reports, and campaign materials that communicate who you are clearly and consistently — across your website, your annual report, your social channels, and everything in between.
   </ServiceCard>
 </ServiceGrid>

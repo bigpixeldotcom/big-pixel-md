@@ -7,7 +7,7 @@ export default async function ProjectsPage() {
 
   return (
     <main className="flex flex-col items-start gap-8">
-      <h1 className="font-headline font-black text-4xl md:text-5xl lg:text-6xl xl:text-8xl">
+      <h1 className="font-headline font-black text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
         Projects Portfolio
       </h1>
       <ul className="grid grid-cols-3 gap-8 w-full">
@@ -40,6 +40,9 @@ export default async function ProjectsPage() {
           </li>
         ))}
       </ul>
+      <h2 className="font-headline font-bold text-metal-500 text-2xl mt-8">
+        More projects coming soon as I update the website...
+      </h2>
     </main>
   );
 }

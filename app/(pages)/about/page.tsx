@@ -4,7 +4,7 @@ import AboutCopy, { frontmatter } from '@/app/markdown/pages/about-doc.mdx';
 export default function AboutPage() {
   return (
     <main className="flex flex-col items-start gap-8">
-      <h1 className="font-headline font-black text-4xl md:text-5xl lg:text-6xl xl:text-8xl">
+      <h1 className="font-headline font-black text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
         {frontmatter.title}
       </h1>
       <Image

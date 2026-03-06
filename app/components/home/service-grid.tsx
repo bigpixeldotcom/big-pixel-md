@@ -40,7 +40,7 @@ export function ServiceCard(service: ServiceCardProps) {
       <h3 className="font-headline font-black text-2xl">{service.title}</h3>
       <h4 className="font-bold text-xl leading-6 tracking-tight">{service.subtitle}</h4>
       <div className="text-base prose prose-white">{service.children}</div>
-      <CTAButton button={service.cta} />
+      {service.cta && <CTAButton button={service.cta} />}
     </div>
   );
 }

@@ -36,12 +36,12 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             alt={image.alt}
             width={1600}
             height={1138}
-            className="rounded-lg w-full h-auto embla__slide"
+            className="embla__slide"
           />
         ))}
       </Carousel>
       {frontmatter.scrollableImage && (
-        <div className="w-full h-full relative rounded-lg overflow-clip">
+        <div className="w-full h-full relative rounded-lg overflow-clip shadow-2xl">
           <div className="h-8 w-full bg-metal-50 border-b border-metal-400 rounded-t-lg py-1 px-4 flex items-center gap-2">
             <div className="size-3 bg-red-600 rounded-full" />
             <div className="size-3 bg-yellow-300 rounded-full" />

@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     siteName: 'Big Pixel',
     images: [
       {
-        url: 'https://big-pixel.com/images/generic-og.png',
+        url: 'https://big-pixel.com/open-graph/og-default.png',
         width: 1200,
         height: 630,
         alt: 'Big Pixel - Web design for non-profits and ethical organisations',
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
       'Norfolk-based web design and full-stack development for charities, heritage organisations, and causes that matter. Design experience meets technical depth.',
     images: [
       {
-        url: 'https://big-pixel.com/images/generic-twitter.png',
+        url: 'https://big-pixel.com/open-graph/og-default.png',
         width: 1200,
         height: 675,
         alt: 'Big Pixel - Web design for non-profits and ethical organisations',

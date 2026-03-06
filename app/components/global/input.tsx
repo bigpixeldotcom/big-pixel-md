@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import clsx from 'clsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTriangleExclamation } from '@awesome.me/kit-89a9106b13/icons/classic/regular';
+import { faTriangleExclamation } from '@awesome.me/kit-85090e0c99/icons/classic/regular';
 
 type InputProps = {
   name: string;

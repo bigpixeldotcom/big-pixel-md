@@ -22,6 +22,9 @@ export function CTAButton({ button }: { button: CTAButtonItem }) {
             'bg-purple-700 hover:bg-purple-800 text-white': button.style === 'primary',
             'bg-white/60 hover:bg-white text-purple-800': button.style === 'secondary',
             'bg-transparent hover:bg-black/20 text-white': button.style === 'tertiary',
+            'bg-green-700 hover:bg-green-800 text-white': button.style === 'green',
+            'bg-violet-700 hover:bg-violet-800 text-white': button.style === 'violet',
+            'bg-indigo-700 hover:bg-indigo-800 text-white': button.style === 'indigo',
           }
         )}
       >
