@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import '@/app/styles/base.css';
 import { ConsentManager } from './consent-manager';
+import { Analytics } from '@vercel/analytics/next';
 
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -100,6 +101,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${nexa.variable} ${nexaText.variable} antialiased`}>
         <ConsentManager>{children}</ConsentManager>
+        <Analytics />
       </body>
     </html>
   );
