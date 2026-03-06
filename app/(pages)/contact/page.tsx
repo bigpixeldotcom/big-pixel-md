@@ -1,5 +1,13 @@
 import ContactForm from '@/app/components/contact/contact-form';
 import { Toaster } from 'sonner';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact',
+  description:
+    'Get in touch about web design for your charity, non-profit, or ethical organisation. Based in Norfolk.',
+  alternates: { canonical: 'https://www.big-pixel.com/contact' },
+};
 
 export default function ContactPage() {
   return (

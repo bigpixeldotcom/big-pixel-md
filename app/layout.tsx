@@ -9,6 +9,9 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 
 config.autoAddCss = false;
 
+const bpDescription =
+  'Charity web design specialist based in Norfolk. With over decade of sector experience, I build websites using the latest technologies and best practices. I understand the unique challenges charities face, and I work closely with you to create a site that supports your mission and goals.';
+
 const nexa = localFont({
   src: [
     {
@@ -52,25 +55,29 @@ const nexaText = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://big-pixel.com'),
+  metadataBase: new URL('https://www.big-pixel.com'),
   title: {
     template: '%s - Big Pixel',
-    default: 'Big Pixel | Web Design for Non-Profits & Ethical Organisations',
+    default: 'Big Pixel | Web Design for Charities & Ethical Organisations',
   },
-  description:
-    'Norfolk-based web design and full-stack development for charities, heritage organisations, and causes that matter. Design experience meets technical depth.',
+  description: bpDescription,
+  keywords: [
+    'web design for charities',
+    'charity web design',
+    'non-profit web design',
+    'ethical organisation web design',
+  ],
   openGraph: {
-    title: 'Big Pixel | Web Design for Non-Profits & Ethical Organisations',
-    description:
-      'Norfolk-based web design and full-stack development for charities, heritage organisations, and causes that matter. Design experience meets technical depth.',
-    url: 'https://big-pixel.com',
+    title: 'Big Pixel | Web Design for Charities & Ethical Organisations',
+    description: bpDescription,
+    url: 'https://www.big-pixel.com',
     siteName: 'Big Pixel',
     images: [
       {
-        url: 'https://big-pixel.com/open-graph/og-default.png',
+        url: 'https://www.big-pixel.com/open-graph/og-default.png',
         width: 1200,
         height: 630,
-        alt: 'Big Pixel - Web design for non-profits and ethical organisations',
+        alt: 'Big Pixel - Web Design for Charities & Ethical Organisations',
       },
     ],
     locale: 'en_GB',
@@ -78,18 +85,43 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Big Pixel | Web Design for Non-Profits & Ethical Organisations',
-    description:
-      'Norfolk-based web design and full-stack development for charities, heritage organisations, and causes that matter. Design experience meets technical depth.',
+    title: 'Big Pixel | Web Design for Charities & Ethical Organisations',
+    description: bpDescription,
     images: [
       {
-        url: 'https://big-pixel.com/open-graph/og-default.png',
+        url: 'https://www.big-pixel.com/open-graph/og-default.png',
         width: 1200,
         height: 675,
-        alt: 'Big Pixel - Web design for non-profits and ethical organisations',
+        alt: 'Big Pixel - Web Design for Charities & Ethical Organisations',
       },
     ],
   },
+};
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Big Pixel',
+  url: 'https://www.big-pixel.com',
+  logo: 'https://www.big-pixel.com/brand/big-pixel-full-black.png',
+  description: bpDescription,
+  founder: { '@type': 'Person', name: 'James Beston' },
+  areaServed: 'Norfolk, UK',
+  sameAs: [
+    'https://www.facebook.com/bigpixeldotcom',
+    'https://www.linkedin.com/company/bigpixeldotcom',
+    'https://www.instagram.com/bigpixeldotcom',
+    'https://bsky.app/profile/big-pixel.com',
+  ],
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Big Pixel',
+  url: 'https://www.big-pixel.com',
+  description: bpDescription,
+  publisher: { '@type': 'Organization', name: 'Big Pixel' },
 };
 
 export default function RootLayout({
@@ -103,6 +135,18 @@ export default function RootLayout({
         <ConsentManager>{children}</ConsentManager>
         <Analytics />
       </body>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationSchema).replace(/</g, '\\u003c'),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteSchema).replace(/</g, '\\u003c'),
+        }}
+      />
     </html>
   );
 }

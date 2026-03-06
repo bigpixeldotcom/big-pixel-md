@@ -1,6 +1,14 @@
 import ServiceCopy, { frontmatter } from '@/app/markdown/pages/services-doc.mdx';
 import StatementCards from '@/app/markdown/pages/statement-cards.mdx';
 
+const servicesSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Web Design',
+  provider: { '@type': 'Organization', name: 'Big Pixel' },
+  areaServed: { '@type': 'Place', name: 'Norfolk, UK' },
+};
+
 export default function ServicesPage() {
   return (
     <main className="flex flex-col items-start gap-8">
@@ -10,9 +18,6 @@ export default function ServicesPage() {
       <h2 className="font-headline font-bold text-xl md:text-2xl lg:text-3xl xl:text-4xl">
         {frontmatter.headline}
       </h2>
-      <p className="text-xl lg:text-2xl xl:text-3xl text-metal-700 dark:text-metal-400">
-        {frontmatter.description}
-      </p>
       <div className="prose prose-metal dark:prose-invert max-w-none text-lg lg:text-xl xl:text-2xl prose-headings:font-headline prose-headings:font-black">
         <ServiceCopy />
       </div>
@@ -20,6 +25,12 @@ export default function ServicesPage() {
         How I can help your organisation
       </h2>
       <StatementCards />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(servicesSchema).replace(/</g, '\\u003c'),
+        }}
+      />
     </main>
   );
 }

@@ -3,11 +3,43 @@ import { getProjectSlugs } from '@/app/lib/mdx';
 import GraphCard from '@/app/components/projects/graph-card';
 import ProjectDetails from '@/app/components/projects/details';
 import Carousel from '@/app/components/global/carousel';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const { frontmatter } = await import(`@/app/markdown/projects/${slug}.mdx`);
+  return {
+    title: frontmatter.title,
+    description: frontmatter.description,
+    keywords: frontmatter.keywords,
+    alternates: { canonical: frontmatter.canonicalUrl },
+    openGraph: {
+      title: frontmatter.title,
+      description: frontmatter.subtitle,
+      images: [{ url: frontmatter.ogImage }],
+      type: 'article',
+    },
+  };
+}
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
   const { default: Project, frontmatter } = await import(`@/app/markdown/projects/${slug}.mdx`);
+
+  const creativeWork = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    headline: frontmatter.title,
+    author: { '@type': 'Person', name: frontmatter.author },
+    datePublished: frontmatter.datePublished,
+    dateModified: frontmatter.dateModified,
+    publisher: { '@type': 'Organization', name: 'Big Pixel' },
+  };
 
   return (
     <main className="flex flex-col items-start gap-8">
@@ -58,6 +90,12 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           </div>
         </div>
       )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(creativeWork).replace(/</g, '\\u003c'),
+        }}
+      />
     </main>
   );
 }

@@ -5,6 +5,7 @@ declare module '*.mdx' {
     title?: string;
     headline?: string;
     description?: string;
+    keywords?: string[];
     heroImage?: string;
     caption?: string;
     altText?: string;
