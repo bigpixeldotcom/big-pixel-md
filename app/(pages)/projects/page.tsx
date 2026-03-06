@@ -10,7 +10,7 @@ export default async function ProjectsPage() {
       <h1 className="font-headline font-black text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
         Projects Portfolio
       </h1>
-      <ul className="grid grid-cols-3 gap-8 w-full">
+      <ul className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full">
         {projects.map((project) => (
           <li
             key={project.slug}
