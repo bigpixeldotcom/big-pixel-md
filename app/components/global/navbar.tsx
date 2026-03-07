@@ -30,17 +30,23 @@ export default function NavBar() {
   ];
 
   return (
-    <header className="z-50 fixed top-6 lg:top-9 w-full">
-      <div className="w-full max-w-7xl px-6 lg:mx-auto">
+    <header className="z-50 fixed top-2 lg:top-4 xl:top-9 w-full">
+      <div className="w-full max-w-7xl px-2 lg:px-4 xl:mx-auto">
         <nav
           aria-label="Global"
-          className="w-full p-4 bg-white/60 dark:bg-black/60 rounded-full outline-1 outline-metal-100 dark:outline-metal-950 backdrop-blur-sm inline-flex justify-between items-center overflow-hidden shadow-lg shadow-metal-300/30 dark:shadow-black/60"
+          className="w-full p-2 lg:p-4 bg-white/60 dark:bg-black/60 rounded-2xl lg:rounded-full outline-1 outline-metal-100 dark:outline-metal-950 backdrop-blur-sm inline-flex justify-between items-center overflow-hidden shadow-lg shadow-metal-300/30 dark:shadow-black/60"
         >
           <div className="flex lg:flex-1">
-            <Link href="/" className="-m-1.5 p-1.5">
-              <div className="size-10 relative">
+            <Link href="/" className="-m-1 p-1">
+              <div className="size-8 lg:size-12 relative">
                 <span className="sr-only">Big Pixel</span>
-                <Image src="/brand/nav-icon.svg" width={40} height={40} alt="" />
+                <Image
+                  src="/brand/nav-icon.svg"
+                  width={40}
+                  height={40}
+                  alt=""
+                  className="size-8 lg:size-12"
+                />
               </div>
             </Link>
           </div>
@@ -51,7 +57,7 @@ export default function NavBar() {
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-metal-700 dark:text-metal-400 cursor-pointer"
             >
               <span className="sr-only">Open main menu</span>
-              <FontAwesomeIcon icon={faBars} aria-hidden="true" className="text-2xl" />
+              <FontAwesomeIcon icon={faBars} aria-hidden="true" className="text-xl" />
             </button>
           </div>
           <div className="hidden lg:flex gap-x-12">
@@ -59,6 +65,7 @@ export default function NavBar() {
               <Link
                 key={nav.label}
                 href={nav.slug || '#'}
+                scroll={false}
                 className="font-semibold tracking-tight px-6 py-3 rounded-full bg-transparent hover:bg-metal-50/50 dark:hover:bg-black transition-colors ease-in-out duration-300"
               >
                 {nav.label}
@@ -68,6 +75,7 @@ export default function NavBar() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
               href="/contact"
+              scroll={false}
               className="font-semibold text-purple-800 dark:text-purple-400 tracking-tight px-6 py-3 rounded-full bg-transparent hover:bg-purple-50/25 dark:hover:bg-black transition-colors ease-in-out duration-300"
             >
               Contact me
@@ -81,10 +89,16 @@ export default function NavBar() {
             className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white dark:bg-black-900 p-6"
           >
             <div className="flex items-center justify-between">
-              <Link href="/">
-                <div className="size-10 relative">
+              <Link href="/" onClick={() => setMobileMenuOpen(false)}>
+                <div className="relative">
                   <span className="sr-only">Big Pixel</span>
-                  <Image src="/brand/nav-icon.svg" width={40} height={40} alt="" />
+                  <Image
+                    src="/brand/nav-icon.svg"
+                    width={40}
+                    height={40}
+                    alt=""
+                    className="size-8"
+                  />
                 </div>
               </Link>
               <button
@@ -93,7 +107,7 @@ export default function NavBar() {
                 className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-metal-700 dark:text-metal-400 cursor-pointer"
               >
                 <span className="sr-only">Close menu</span>
-                <FontAwesomeIcon icon={faXmark} aria-hidden="true" className="text-2xl" />
+                <FontAwesomeIcon icon={faXmark} aria-hidden="true" className="text-xl" />
               </button>
             </div>
             <div className="mt-6 flow-root">
@@ -103,6 +117,7 @@ export default function NavBar() {
                     <Link
                       key={nav.label}
                       href={nav.slug || '#'}
+                      onClick={() => setMobileMenuOpen(false)}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold"
                     >
                       {nav.label}
@@ -112,6 +127,7 @@ export default function NavBar() {
                 <div className="py-6">
                   <Link
                     href="/contact"
+                    onClick={() => setMobileMenuOpen(false)}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-purple-800 dark:text-purple-400"
                   >
                     Contact me

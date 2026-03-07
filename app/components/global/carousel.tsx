@@ -35,10 +35,10 @@ export default function Carousel({
   const scrollNext = () => emblaApi?.scrollNext();
 
   return (
-    <div className="embla flex items-center gap-2 md:gap-4">
+    <div className="embla flex items-center gap-1 sm:gap-2 md:gap-4">
       <button
         onClick={scrollPrev}
-        className="size-12 text-metal-300 hover:text-metal-600 transition-colors ease-in-out duration-300"
+        className="size-8 lg:size-12 text-metal-300 hover:text-metal-600 transition-colors ease-in-out duration-300"
       >
         <PrevIcon />
       </button>
@@ -47,7 +47,7 @@ export default function Carousel({
       </div>
       <button
         onClick={scrollNext}
-        className="size-12 text-metal-300 hover:text-metal-600 transition-colors ease-in-out duration-300"
+        className="size-8 lg:size-12 text-metal-300 hover:text-metal-600 transition-colors ease-in-out duration-300"
       >
         <NextIcon />
       </button>

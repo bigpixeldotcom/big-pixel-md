@@ -11,8 +11,8 @@ export default function Focus() {
   const alignClass = textPositionClass[frontmatter.textPosition ?? 'left'] ?? 'items-start';
 
   return (
-    <div className="min-h-screen lg:h-screen w-full">
-      <div className="hidden lg:block relative w-full h-full">
+    <div className="min-h-screen xl:h-screen w-full">
+      <div className="hidden xl:block relative w-full h-full">
         <Image
           src={frontmatter.image ? frontmatter.image : ''}
           alt="Background Image"
@@ -35,13 +35,13 @@ export default function Focus() {
           </div>
         </section>
       </div>
-      <div className="relative lg:hidden w-full h-full">
+      <div className="relative xl:hidden w-full h-full">
         <section className="mx-auto flex flex-col justify-center px-6 text-white font-sans h-full w-full items-center">
-          <div className="flex flex-col gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10 w-full lg:w-1/2 bg-black/80 p-8 rounded-lg">
+          <div className="flex flex-col gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10 w-full bg-black/80 p-8 rounded-lg">
             <h2 className="font-headline font-black text-4xl md:text-5xl lg:text-6xl text-yellow-300">
               {frontmatter.title}
             </h2>
-            <div className="text-base lg:text-lg prose prose-white">
+            <div className="text-base lg:text-lg prose prose-white max-w-none">
               <FocusText />
             </div>
           </div>

@@ -242,7 +242,7 @@ body {
 }
 
 .embla {
-  --slide-spacing: 16px;
+  --slide-spacing: 1rem;
 }
 
 .embla__viewport {

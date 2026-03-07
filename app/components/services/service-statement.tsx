@@ -25,14 +25,14 @@ type ServiceCardProps = {
 };
 
 export function StatementGrid({ children }: { children: React.ReactNode }) {
-  return <div className="mt-8 w-full">{children}</div>;
+  return <div className="w-full">{children}</div>;
 }
 
 export function StatementCard(service: ServiceCardProps) {
   return (
     <div
       className={clsx(
-        'p-8 not-first:mt-8 rounded-xl flex flex-col items-start justify-between gap-4 text-left',
+        'p-6 md:p-8 not-first:mt-8 rounded-xl flex flex-col items-start justify-between gap-4 text-left',
         colourMap[service.colour] || 'bg-metal-50 text-metal-700'
       )}
     >
