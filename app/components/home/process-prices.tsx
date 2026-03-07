@@ -15,7 +15,7 @@ const prices = [
     title: 'Starter Sites',
     copy: 'A simple, beautiful website for a small charity or campaign.',
     cost: 'Starting at £500',
-    colour: 'bg-green-500',
+    colour: 'bg-green-600',
     icon: faSeedling,
   },
   {
@@ -23,7 +23,7 @@ const prices = [
     title: 'Growth Sites',
     copy: 'A more complex website with custom design, integrations, or functionality.',
     cost: 'Between £1,000 and £2,500',
-    colour: 'bg-violet-600',
+    colour: 'bg-violet-700',
     icon: faArrowTrendUp,
   },
   {
@@ -31,7 +31,7 @@ const prices = [
     title: 'Bespoke projects',
     copy: 'Larger or fully customised projects with unique requirements.',
     cost: 'Quoted individually',
-    colour: 'bg-indigo-800',
+    colour: 'bg-indigo-700',
     icon: faRocketLaunch,
   },
 ];

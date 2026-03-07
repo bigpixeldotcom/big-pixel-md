@@ -34,6 +34,8 @@ export default function Footer() {
             </p>
           </div>
           <iframe
+            title="Cyber Essentials Certified"
+            loading="lazy"
             src="https://registry.blockmarktech.com/certificates/c7821b2f-c97a-405e-8dc1-654b61218eb1/widget/?tooltip_position=top_left&theme=transparent&hover=t"
             style={{ border: 'none', height: '120px', width: '120px' }}
           ></iframe>

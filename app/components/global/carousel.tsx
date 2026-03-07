@@ -37,6 +37,8 @@ export default function Carousel({
   return (
     <div className="embla flex items-center gap-1 sm:gap-2 md:gap-4">
       <button
+        id="prev"
+        aria-label="Previous"
         onClick={scrollPrev}
         className="size-8 lg:size-12 text-metal-300 hover:text-metal-600 transition-colors ease-in-out duration-300"
       >
@@ -46,6 +48,8 @@ export default function Carousel({
         <div className="embla__container items-center mx-auto">{children}</div>
       </div>
       <button
+        id="next"
+        aria-label="Next"
         onClick={scrollNext}
         className="size-8 lg:size-12 text-metal-300 hover:text-metal-600 transition-colors ease-in-out duration-300"
       >
