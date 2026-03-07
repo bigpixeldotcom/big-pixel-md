@@ -43,7 +43,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
   return (
     <main className="flex flex-col items-start gap-8">
-      <div className="flex flex-col lg:flex-row items-start justify-start gap-8">
+      <div className="flex flex-col lg:flex-row items-start justify-start gap-4">
         <GraphCard
           title={frontmatter.title}
           client={frontmatter.client}
