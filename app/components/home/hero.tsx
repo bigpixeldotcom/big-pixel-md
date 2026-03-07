@@ -6,7 +6,7 @@ const ctaButtons = [
   {
     _key: 'cta1',
     label: 'See my work',
-    url: '/work',
+    url: '/projects',
     linkType: 'internal',
     style: 'primary',
   },
