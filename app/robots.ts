@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/portal/',
     },
-    sitemap: 'https://big-pixel.com/sitemap.xml',
+    sitemap: 'https://www.big-pixel.com/sitemap.xml',
   };
 }
