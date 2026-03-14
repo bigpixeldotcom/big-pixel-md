@@ -21,7 +21,7 @@ export default function Footer() {
             <span className="sr-only">Big Pixel</span>
             <Image src="/brand/big-pixel-text.svg" width={118} height={28} alt="" />
             <p className="text-sm">
-              &copy; 2025 Big Pixel Consulting Ltd. trading as Big Pixel
+              &copy; {new Date().getFullYear()} Big Pixel Consulting Ltd. trading as Big Pixel
               <br />
               <span className="text-xs">
                 Big Pixel&reg; is a registered trademark in the United Kingdom.
