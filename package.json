@@ -10,15 +10,15 @@
   },
   "dependencies": {
     "@awesome.me/kit-85090e0c99": "^1.0.10",
-    "@c15t/nextjs": "^1.8.3",
+    "@c15t/nextjs": "^1.8.5",
     "@c15t/scripts": "^1.0.1",
     "@fortawesome/fontawesome-svg-core": "^7.2.0",
-    "@fortawesome/react-fontawesome": "^3.2.0",
+    "@fortawesome/react-fontawesome": "^3.3.0",
     "@headlessui/react": "^2.2.9",
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
-    "@next/mdx": "^16.1.6",
-    "@notionhq/client": "^5.11.1",
+    "@next/mdx": "^16.2.1",
+    "@notionhq/client": "^5.14.0",
     "@vercel/analytics": "^1.6.1",
     "botid": "^1.5.11",
     "clsx": "^2.1.1",
@@ -33,15 +33,15 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.2.2",
     "@tailwindcss/typography": "^0.5.19",
     "@types/mdx": "^2.0.13",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
+    "@types/node": "^20.19.37",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.4",
     "eslint-config-next": "16.1.6",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "tailwindcss": "^4.2.2",
+    "typescript": "^5.9.3"
   }
 }
