@@ -3,7 +3,6 @@
 import { z } from 'zod';
 import { notion } from '@/app/lib/notion';
 import { APIErrorCode, ClientErrorCode, isNotionClientError } from '@notionhq/client';
-import { checkBotId } from 'botid/server';
 
 const schema = z.strictObject({
   name: z.string().min(2, { error: 'Please provide a name' }),
@@ -29,16 +28,6 @@ export async function sendContactForm(initialState: unknown, formData: FormData)
       errors: z.flattenError(result.error),
       payload: formData,
     };
-  }
-
-  const verification = await checkBotId({
-    developmentOptions: {
-      bypass: 'HUMAN', // To test error: 'BAD_BOT'
-    },
-  });
-
-  if (verification.isBot) {
-    return { message: 'Access denied' };
   }
 
   try {
