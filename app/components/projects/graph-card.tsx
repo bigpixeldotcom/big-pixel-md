@@ -10,7 +10,7 @@ export default function GraphCard({
   children: React.ReactNode;
 }) {
   return (
-    <div className="w-full lg:w-2/3 graph-paper border-3 border-metal-50 dark:border-black/20 flex flex-col items-start gap-3 lg:gap-6 p-6 lg:p-8 rounded-2xl">
+    <div className="flex-1 w-full lg:w-2/3 graph-paper border-3 border-metal-50 dark:border-black/20 flex flex-col items-start gap-3 lg:gap-6 p-6 lg:p-8 rounded-2xl">
       <h1 className="font-headline font-bold text-xl md:text-2xl lg:text-3xl xl:text-4xl">
         {title}
       </h1>
