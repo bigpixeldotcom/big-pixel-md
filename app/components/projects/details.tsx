@@ -3,7 +3,7 @@ import { format } from 'date-fns';
 import clsx from 'clsx';
 
 const colourMap = {
-  green: 'bg-green-600',
+  green: 'bg-green-500',
   indigo: 'bg-indigo-700',
   violet: 'bg-violet-700',
 };

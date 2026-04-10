@@ -93,6 +93,12 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           </div>
         </div>
       )}
+      {frontmatter.mp4 && (
+        <video autoPlay loop muted className="max-w-244 mx-auto shadow-2xl">
+          <source src={`/images/projects/${frontmatter.mp4}`} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
