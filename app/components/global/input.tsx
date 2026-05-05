@@ -10,8 +10,8 @@ type InputProps = {
   describedBy?: string;
   type?: string;
   placeholder?: string;
-  errorId?: string;
-  errorText?: string;
+  errorId?: string | undefined;
+  errorText?: string | undefined;
   required: boolean;
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
@@ -21,8 +21,8 @@ type TextAreaProps = {
   describedById?: string;
   describedBy?: string;
   placeholder?: string;
-  errorId?: string;
-  errorText?: string;
+  errorId?: string | undefined;
+  errorText?: string | undefined;
   required: boolean;
 } & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 

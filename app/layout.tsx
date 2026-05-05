@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import '@/app/styles/base.css';
 import { ConsentManager } from './consent-manager';
 
 import { config } from '@fortawesome/fontawesome-svg-core';
+
+import '@/app/styles/base.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
 config.autoAddCss = false;
