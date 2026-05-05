@@ -84,8 +84,9 @@ export default function ContactForm() {
         });
         toast.error('Failed to send message. Please try again later.');
       }
-    } catch (e) {
+    } catch (error) {
       setStatus('error');
+      console.error('Error submitting form:', error);
       setError({
         name: undefined,
         organisation: undefined,
