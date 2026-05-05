@@ -150,7 +150,7 @@ export default function ContactForm() {
           errorId={error?.project ? 'project-error' : undefined}
           errorText={error?.project ? 'Please provide details of the project' : undefined}
         />
-        <div data-netlify-recaptcha="true"></div>
+        <div data-netlify-recaptcha="true" />
         <button
           className="mt-4 w-36 bg-indigo-700 hover:bg-indigo-600 disabled:bg-metal-400 py-4 rounded text-xl text-white font-semibold cursor-pointer transition-colors ease-in-out duration-300"
           disabled={status === 'pending'}
